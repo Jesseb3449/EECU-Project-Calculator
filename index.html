@@ -8,21 +8,65 @@
 </head>
 <body>
     <header>
-        <nav></nav>
-            <div><img src="#"img> </div>
-            <ul>
+        <nav>
+            <div><img src="#"img></div>
                 <a href="#"> Savings & Checkings </a> 
                 <a href="#"> Loads & Credit Cards </a> 
                 <a href="#"> Online & Mobile </a> 
                 <a href="#"> Insure & Invest </a> 
                 <a href="#"> News & Resources </a> 
                 <a href="#"> Money 101 </a> 
-    </ul>
-</nav>
-</header>
-<section id="progress-bar"> </section>
-<main> <section id="Tax Deductions"><btn> Career 1</btn><btn> Career 2</btn><btn> Career 3</btn><btn>Career 4</btn> <section id="Tax Information"></section> 
-    <section id="Pie Chart"></section></main>
+        </nav>
+    </header>
+    <section id="progress-bar">
+            <div class="progress-bar" id="progress-bar"></div>
+    </section>
+    <main> 
+        <div class="tax-bud" >
+            <label for="tax">Your Career & Tax Deductions:</label>
+                <table class="tax">
+                    <tr>
+                        <th>Career</th>
+                        <th>Tax Deductions</th>
+                    </tr>
+                    <tr>
+                        <td>Teacher</td>
+                        <td>$5000</td>
+                    </tr>
+                    <tr>
+                        <td>Doctor</td>
+                        <td>$10000</td>
+                    </tr>
+                    <tr>
+                        <td>Engineer</td>
+                        <td>$7000</td>
+                    </tr>
+                    <tr>
+                        <td>Artist</td>
+                        <td>$3000</td>
+                    </tr>
+            <select name="tax" id="tax">
+                <option value="">Select your career
+                </table>
+            </option>
+            </select>
+            
+            <label for="budg">Your Monthly Budget:</label>
+            <select name="budg" id="budg">
 
+            </select>
+        </div> 
+    <section id="Pie Chart">
+        <h1>pie</h1>
+        <button id="pie-btn">Print</button>
+        <button id="pie-btn">Download</button>
+        <button id="pie-btn">Custom Expense</button>
+        <button id="pie-btn">Create Another</button>
+    </section>
+    </main>
+    <footer>
+
+    </footer>
+    <scrtipt src="script.js"></script>
 </body>
 </html>

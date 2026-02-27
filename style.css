@@ -1,0 +1,12 @@
+:root{
+    --primary:#004999;
+    --bar:#237f2b;
+    --tax:#397d4a;
+}
+nav{
+    color:var(--primary);
+}
+main{
+    display:flex;
+    justify-content:space-around;
+}
