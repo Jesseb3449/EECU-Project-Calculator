@@ -28,38 +28,38 @@
     </section>
     <main> 
         <div class="tax-bud" >
-            <h2 class="Label" for="tax">Your Career & Tax Deductions:</h2>
-            <label for="user">Select your career</label>
-            <select name="tax" id="career-dropdown">
-                <option value="">--Please choose a career--</option>
-            </select>
-            <table class="tax">
-                <tr>
-                    <th>Tax Type</th>
-                    <th>Amount</th>
-                </tr>
-                <tr>
-                    <td>Medicare (1.45%)</td>
-                    <td id="medicare-val">$0.00</td>
-                </tr>
-                <tr>
-                    <td>Social Security (6.2%)</td>
-                    <td id="ss-val">$0.00</td>
-                </tr>
-                <tr>
-                    <td>Federal Income Tax (reliant)</td>
-                    <td id="fed-val">$0.00</td>
-                </tr>
-                <tr>
-                    <td>State Tax (4%)</td>
-                    <td id="state-val">$0.00</td>
-                </tr>
-                <tr style="font-weight: bold; background-color: #f0f0f0;">
-                    <td>NET TAKE-HOME PAY</td>
-                    <td id="net-pay-val">$0.00</td>
-                </tr>
-            </table>
-            </select>
+            <h2 class="Label" onclick='toggleTax()' id="tax-btn">Your Career & Tax Deductions:</h2>
+            <div id="dropdown" style="display:none;">
+                <select name="tax" id="career-dropdown">
+                    <option value="">--Please choose a career--</option>
+                </select>
+                <table class="tax">
+                    <tr>
+                        <th>Tax Type</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Medicare (1.45%)</td>
+                        <td id="medicare-val">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Social Security (6.2%)</td>
+                        <td id="ss-val">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Federal Income Tax (reliant)</td>
+                        <td id="fed-val">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>State Tax (4%)</td>
+                        <td id="state-val">$0.00</td>
+                    </tr>
+                    <tr style="font-weight: bold; background-color: #f0f0f0;">
+                        <td>NET TAKE-HOME PAY</td>
+                        <td id="net-pay-val">$0.00</td>
+                    </tr>
+                </table>
+            </div>
         </div> 
     <section id="Pie Chart">
         <h1>pie</h1>
