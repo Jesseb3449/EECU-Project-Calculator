@@ -1,3 +1,12 @@
+const taxBtn = document.getElementById('tax-btn');
+
+function toggleTax() {
+    const table = document.getElementById('dropdown');
+    if (table.style.display === 'none' || table.style.display === '') {
+        table.style.display = 'flex';
+    } else {        table.style.display = 'none';
+    }
+}
 
 async function populateDropdown() {
     const dropdown = document.getElementById('career-dropdown');
