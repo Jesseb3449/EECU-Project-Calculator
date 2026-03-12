@@ -66,12 +66,13 @@ careerDropdown.addEventListener('change', function() {
  
     const totalDeductions = federalTax + medicare + socialSecurity + stateTax;
     const netPay = grossSalary - totalDeductions;
+    const netMonth = (grossSalary - totalDeductions) / 12;
 
  
-    updateTable(medicare, socialSecurity, federalTax, stateTax, netPay);
+    updateTable(medicare, socialSecurity, federalTax, stateTax, netPay, netMonth);
 });
 
-function updateTable(med, ss, fed, state, net) {
+function updateTable(med, ss, fed, state, net, month) {
     const format = (num) => `$${num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     
     document.getElementById('medicare-val').textContent = format(med);
@@ -79,8 +80,9 @@ function updateTable(med, ss, fed, state, net) {
     document.getElementById('fed-val').textContent = format(fed);
     document.getElementById('state-val').textContent = format(state);
     document.getElementById('net-pay-val').textContent = format(net);
+    document.getElementById('net-monthly-val').textContent = format(month);
 }
 
 function resetTable() {
-    updateTable(0, 0, 0, 0, 0);
+    updateTable(0, 0, 0, 0, 0, 0);
 }
