@@ -1,4 +1,5 @@
 const taxBtn = document.getElementById('tax-btn');
+const monthlyBtn = document.getElementById('monthly-btn');
 
 function toggleTax() {
     const table = document.getElementById('dropdown');
@@ -8,6 +9,14 @@ function toggleTax() {
     }
 }
 
+function toggleMonthlyBudget() {
+    const form = document.getElementById('input-DropDown');
+    if (form.style.display === 'none' || form.style.display === '') {
+        form.style.display = 'flex';
+    } else {        form.style.display = 'none';
+    }
+}
+// Everything below this comment is most likely AI slop (My developers)
 async function populateDropdown() {
     const dropdown = document.getElementById('career-dropdown');
     if (!dropdown) return console.error("Dropdown element not found!");

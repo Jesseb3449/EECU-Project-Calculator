@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
 </head>
 <body>
     <header>
@@ -15,12 +18,26 @@
             <div>
                 <img src="/img/EECU-removebg-preview.png" alt="Logo">
             </div>
-                <a href="#"> Savings & Checkings </a> 
-                <a href="#"> Loads & Credit Cards </a> 
-                <a href="#"> Online & Mobile </a> 
-                <a href="#"> Insure & Invest </a> 
-                <a href="#"> News & Resources </a> 
-                <a href="#"> Money 101 </a> 
+                <ul id="top-Nav-Ul">
+                    <li class="top-Nav-Li">
+                        <a href="#"> Savings & Checkings</a> 
+                    </li>
+                    <li class="top-Nav-Li">
+                        <a href="#">Loans & Credit Cards</a> 
+                    </li>
+                    <li class="top-Nav-Li">
+                        <a href="#">Online & Mobile</a> 
+                    </li>
+                    <li class="top-Nav-Li">
+                        <a href="#">Insure & Invest</a> 
+                    </li>
+                    <li class="top-Nav-Li">
+                        <a href="#">News & Resources </a> 
+                    </li>
+                    <li class="top-Nav-Li">
+                        <a href="#">Money 101</a>
+                    </li>
+                </ul>
         </nav>
     </header>
     <section id="progress-bar">
@@ -29,47 +46,58 @@
             </div>
     </section>
     <main> 
-        <div class="tax-bud" >
-            <h2 class="Label" onclick='toggleTax()' id="tax-btn">Your Career & Tax Deductions:</h2>
-            <div id="dropdown" style="display:none;">
-                <select name="tax" id="career-dropdown">
-                    <option value="">--Please choose a career--</option>
-                </select>
-                <table class="tax">
-                    <tr id="heading">
-                        <th>Tax Type</th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <td>Medicare (1.45%)</td>
-                        <td id="medicare-val">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td>Social Security (6.2%)</td>
-                        <td id="ss-val">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td>Federal Income Tax (reliant)</td>
-                        <td id="fed-val">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td>State Tax (4%)</td>
-                        <td id="state-val">$0.00</td>
-                    </tr>
-                    <tr style="font-weight: bold; background-color: #f0f0f0;">
-                        <td>NET TAKE-HOME PAY</td>
-                        <td id="net-pay-val">$0.00</td>
-                    </tr>
-                    <tr style="font-weight: bold; background-color: #f0f0f0;">
-                        <td>NET TAKE HOME MONTHLY PAY</td>
-                        <td id="net-monthly-val">$0.00</td>
-                    </tr>
-                </table>
-            </div>
-
-
-
-        </div> 
+        <section id="dropdowns">
+            <div class="tax-bud" >
+                <h2 class="Label" onclick='toggleTax()' id="tax-btn">Your Career & Tax Deductions:</h2>
+                <div id="dropdown" style="display:none;">
+                    <select name="tax" id="career-dropdown">
+                        <option value="">--Please choose a career--</option>
+                    </select>
+                    <table class="tax">
+                        <tr id="heading">
+                            <th>Tax Type</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr>
+                            <td>Medicare (1.45%)</td>
+                            <td id="medicare-val">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Social Security (6.2%)</td>
+                            <td id="ss-val">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Federal Income Tax (reliant)</td>
+                            <td id="fed-val">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>State Tax (4%)</td>
+                            <td id="state-val">$0.00</td>
+                        </tr>
+                        <tr style="font-weight: bold; background-color: #f0f0f0;">
+                            <td>NET TAKE-HOME PAY</td>
+                            <td id="net-pay-val">$0.00</td>
+                        </tr>
+                        <tr style="font-weight: bold; background-color: #f0f0f0;">
+                            <td>NET TAKE HOME MONTHLY PAY</td>
+                            <td id="net-monthly-val">$0.00</td>
+                        </tr>
+                    </table>
+                </div>
+    
+                <div class="monthly-bud">
+                    <h2 class="Label" onclick='toggleMonthlyBudget()' id="monthly-btn">Your Monthly Budget</h2>
+                    <div id="input-DropDown" style="display:none;">
+                        <form id="inputs">
+                            <input type="text" placeholder="Rent/Morgage" id="rent/morage-val">
+                            <input type="text" placeholder="Insurance" id="insurnace-val">
+                            <input type="text" placeholder="Loan Payments" id="loan-payments-val">
+                        </form>
+                    </div>
+                </div>
+    
+            </div> 
+        </section>
     <section id="Pie Chart">
         <p id="monthly-pay-val"></p>
         <button id="pie-btn">Print</button>
@@ -95,7 +123,57 @@
                 <a href="#">Careers</a>
             </section>
         </nav>
-    </footer>
+       </footer>
+       <section id="sec-Bottom">
+        <small id="left-Small">
+            <img src="/img/f-img-1.png" alt="footer-img-1">
+            <p>NMLS #457253</p>
+            <p>Federally inusred by NCUA</p>
+        </small>
+        <div id="bottom-img-container">
+            <ul id="semantic-ul">
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-2.png" alt="app-store">
+                    </a>
+                </li>
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-3.png" alt="facebook">
+                    </a>
+                </li>
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-4.png" alt="instagram">
+                    </a>
+                </li>
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-5.png" alt="X">
+                    </a>
+                </li>
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-6.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-7.png" alt="Youtube">
+                    </a>
+                </li>
+                <li class="bottom-A">
+                    <a href="#">
+                        <img src="/img/f-img-8.png" alt="Playstore">
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <small id="right-Small">
+            <p>©2026 Educational Employees Credit Union</p>
+        </small>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

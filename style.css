@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 :root{
     --primary:#004999;
     --bar:#237f2b;
@@ -52,6 +57,7 @@ main{
     width: 30vw;
     text-align: center;
     z-index: 2;
+    cursor: pointer;
     
 }
 
@@ -80,6 +86,7 @@ th {
 
 footer {
  background: var(--primary);
+ padding: 2rem;
 }
 
 #footer-nav {
@@ -101,4 +108,66 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
+}
+
+#bottom-img-container {
+    display: flex;
+}
+
+.bottom-A {
+    list-style: none;
+}
+
+#sec-Bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#semantic-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#left-Small {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#right-Small {
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#left-Small, #right-Small {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 1rem;
+}
+
+#top-Nav-Ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-Nav-Li {
+    list-style: none;
+}
+
+#dropdowns {
+    display: flex;
+}
+
+#input-DropDown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
