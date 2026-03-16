@@ -1,3 +1,4 @@
+//Start of Dev code
 const taxBtn = document.getElementById('tax-btn');
 const monthlyBtn = document.getElementById('monthly-btn');
 
@@ -94,8 +95,9 @@ function updateTable(med, ss, fed, state, net, month) {
 function resetTable() {
     updateTable(0, 0, 0, 0, 0, 0);
 }
+//End of Dev Code
 
-// Load Chart.js
+
 const chartScript = document.createElement('script');
 chartScript.src = 'https://cdn.jsdelivr.net/npm/chart.js';
 chartScript.onload = () => initChart();
@@ -125,7 +127,7 @@ function initChart() {
       labels: ['Housing', 'Education', 'Essentials', 'Future Proofing', 'Life Style', 'Remaining'],
       datasets: [{
         data: [0, 0, 0, 0, 0, 0],
-        backgroundColor: ['#004999', '#237f2b', '#e07b00', '#9b2335', '#5a2d82', '#d0d0d0'],
+        backgroundColor: ['#FF0000', '#F19A2E', '#F0D71C', '#28F45F', '#331CB9', '#d0d0d0'],
         borderWidth: 2,
         borderColor: '#fff'
       }]
@@ -146,7 +148,7 @@ function initChart() {
     }
   });
 
-  // Listen to all budget inputs — now also saves on each change
+  // Listen to all budget inputs so now it will also chnage saves on each change
   document.querySelectorAll('.budget-input').forEach(input => {
     input.addEventListener('input', () => {
       saveInputs();
@@ -179,6 +181,7 @@ function updateChart() {
   const totalSpent = housing + education + essentials + futureProofing + lifeStyle;
   updateProgressBar(totalSpent, netMonthly);
 
+  // Starting text whem career is chosen 
   if (netMonthly === 0) {
     subtitle.textContent = 'Select a career to get started';
     subtitle.className = '';
@@ -193,12 +196,12 @@ function updateChart() {
   ];
   budgetChart.update();
 
-  if (remaining < 0) {
+  if (remaining < 0) { //Wise-up code 
     subtitle.textContent = `Over budget by $${Math.abs(remaining).toFixed(2)}`;
-    subtitle.className = 'negative';
+    subtitle.className = 'negative'; //Text for negative spending
   } else {
     subtitle.textContent = `$${remaining.toFixed(2)} remaining of $${netMonthly.toFixed(2)}`;
-    subtitle.className = 'positive';
+    subtitle.className = 'positive'; //Text for positive spending
   }
 }
 
@@ -206,5 +209,9 @@ function updateProgressBar(totalSpent, netMonthly) {
   const fill = document.getElementById('progress-fill');
   if (!fill) return;
   const pct = netMonthly > 0 ? Math.min((totalSpent / netMonthly) * 100, 100) : 0;
-  fill.style.width = pct + '%';
+  fill.style.width = pct + '%'; //Porgress bar progressing, dependant on user input
 }
+
+function printToggle() {
+  window.print();
+};

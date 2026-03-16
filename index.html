@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    
 </head>
 <body>
     <header>
@@ -100,7 +102,7 @@
         <div id="input-DropDown" style="display:none;">
             <div class="budget-section">
                 <span class="section-label">Housing:</span>
-                <div class="input-row">
+                <div class="input-row" id="housing">
                     <input type="text" placeholder="Rent/Mortgage" id="rent-mortgage-val" class="budget-input">
                     <input type="text" placeholder="Insurance" id="insurance-val" class="budget-input">
                 </div>
@@ -148,7 +150,8 @@
     <h2 id="chart-title">Monthly Budget Breakdown</h2>
     <p id="chart-subtitle">Select a career to get started</p>
     <canvas id="budgetChart"></canvas>
-  </div>
+       </div>
+       
     </section>
     </main>
     <footer>
