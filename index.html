@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,69 +41,114 @@
         </nav>
     </header>
     <section id="progress-bar">
-            <div class="progress-bar" id="progress-bar">
-
-            </div>
-    </section>
+  <div id="progress-container">
+    <div id="progress-track">
+      <div id="progress-fill"></div>
+    </div>
+    <div id="progress-labels">
+      <span>0%</span>
+      <span>25%</span>
+      <span>50%</span>
+      <span>75%</span>
+      <span>100%</span>
+    </div>
+  </div>
+</section>
     <main> 
         <section id="dropdowns">
-            <div class="tax-bud" >
-                <h2 class="Label" onclick='toggleTax()' id="tax-btn">Your Career & Tax Deductions:</h2>
-                <div id="dropdown" style="display:none;">
-                    <select name="tax" id="career-dropdown">
-                        <option value="">--Please choose a career--</option>
-                    </select>
-                    <table class="tax">
-                        <tr id="heading">
-                            <th>Tax Type</th>
-                            <th>Amount</th>
-                        </tr>
-                        <tr>
-                            <td>Medicare (1.45%)</td>
-                            <td id="medicare-val">$0.00</td>
-                        </tr>
-                        <tr>
-                            <td>Social Security (6.2%)</td>
-                            <td id="ss-val">$0.00</td>
-                        </tr>
-                        <tr>
-                            <td>Federal Income Tax (reliant)</td>
-                            <td id="fed-val">$0.00</td>
-                        </tr>
-                        <tr>
-                            <td>State Tax (4%)</td>
-                            <td id="state-val">$0.00</td>
-                        </tr>
-                        <tr style="font-weight: bold; background-color: #f0f0f0;">
-                            <td>NET TAKE-HOME PAY</td>
-                            <td id="net-pay-val">$0.00</td>
-                        </tr>
-                        <tr style="font-weight: bold; background-color: #f0f0f0;">
-                            <td>NET TAKE HOME MONTHLY PAY</td>
-                            <td id="net-monthly-val">$0.00</td>
-                        </tr>
-                    </table>
+    <div class="tax-bud">
+        <h2 class="Label" onclick='toggleTax()' id="tax-btn">Your Career & Tax Deductions:</h2>
+        <div id="dropdown" style="display:none;">
+            <select name="tax" id="career-dropdown">
+                <option value="">--Please choose a career--</option>
+            </select>
+            <table class="tax">
+                <tr id="heading">
+                    <th>Tax Type</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Medicare (1.45%)</td>
+                    <td id="medicare-val">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Social Security (6.2%)</td>
+                    <td id="ss-val">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Federal Income Tax (Variable)</td>
+                    <td id="fed-val">$0.00</td>
+                </tr>
+                <tr>
+                    <td>State Tax (4%)</td>
+                    <td id="state-val">$0.00</td>
+                </tr>
+                <tr style="font-weight: bold; background-color: #f0f0f0;">
+                    <td>NET TAKE-HOME PAY</td>
+                    <td id="net-pay-val">$0.00</td>
+                </tr>
+                <tr style="font-weight: bold; background-color: #f0f0f0;">
+                    <td>NET TAKE HOME MONTHLY PAY</td>
+                    <td id="net-monthly-val">$0.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="monthly-bud tax-bud">
+        <h2 class="Label" onclick="toggleMonthlyBudget()" id="monthly-btn">Your Monthly Budget:</h2>
+        <div id="input-DropDown" style="display:none;">
+            <div class="budget-section">
+                <span class="section-label">Housing:</span>
+                <div class="input-row">
+                    <input type="text" placeholder="Rent/Mortgage" id="rent-mortgage-val" class="budget-input">
+                    <input type="text" placeholder="Insurance" id="insurance-val" class="budget-input">
                 </div>
-    
-                <div class="monthly-bud">
-                    <h2 class="Label" onclick='toggleMonthlyBudget()' id="monthly-btn">Your Monthly Budget</h2>
-                    <div id="input-DropDown" style="display:none;">
-                        <form id="inputs">
-                            <input type="text" placeholder="Rent/Morgage" id="rent/morage-val">
-                            <input type="text" placeholder="Insurance" id="insurnace-val">
-                            <input type="text" placeholder="Loan Payments" id="loan-payments-val">
-                        </form>
-                    </div>
+            </div>
+            <div class="budget-section">
+                <span class="section-label">Education:</span>
+                <div class="input-row">
+                    <input type="text" placeholder="Loan payments" id="loan-payments-val" class="budget-input">
+                    <input type="text" placeholder="Supplies" id="supplies-val" class="budget-input">
                 </div>
+            </div>
+            <div class="budget-section">
+                <span class="section-label">Essentials:</span>
+                <div class="input-row">
+                    <input type="text" placeholder="Phone" id="phone-val" class="budget-input">
+                    <input type="text" placeholder="Insurance" id="ess-insurance-val" class="budget-input">
+                    <input type="text" placeholder="Groceries" id="groceries-val" class="budget-input">
+                    <input type="text" placeholder="Clothes" id="clothes-val" class="budget-input">
+                </div>
+            </div>
+            <div class="budget-section">
+                <span class="section-label">Future proofing:</span>
+                <div class="input-row">
+                    <input type="text" placeholder="401K payments" id="401k-val" class="budget-input">
+                    <input type="text" placeholder="Investments" id="investments-val" class="budget-input">
+                </div>
+            </div>
+            <div class="budget-section">
+                <span class="section-label">Life Style:</span>
+                <div class="input-row">
+                    <input type="text" placeholder="Dinning" id="dining-val" class="budget-input">
+                    <input type="text" placeholder="Gym" id="gym-val" class="budget-input">
+                    <input type="text" placeholder="Streaming" id="streaming-val" class="budget-input">
+                    <input type="text" placeholder="Personal" id="personal-val" class="budget-input">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     
             </div> 
         </section>
     <section id="Pie Chart">
-        <p id="monthly-pay-val"></p>
-        <button id="pie-btn">Print</button>
-        <button id="pie-btn">Download</button>
-        <button id="pie-btn">Custom Expense</button>
-        <button id="pie-btn">Create Another</button>
+       <div id="chart-container">
+    <h2 id="chart-title">Monthly Budget Breakdown</h2>
+    <p id="chart-subtitle">Select a career to get started</p>
+    <canvas id="budgetChart"></canvas>
+  </div>
     </section>
     </main>
     <footer>

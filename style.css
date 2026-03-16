@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -33,6 +35,13 @@ nav a {
 }
 nav a:hover {
     color: rgb(199, 199, 199);
+}
+
+#top-Nav-Ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
 }
 main{
     display:flex;
@@ -163,11 +172,257 @@ footer {
 
 #dropdowns {
     display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.monthly-bud {
+  border-radius: 1rem;
+  overflow: visible;
+  padding-bottom: 0.75rem;
 }
 
 #input-DropDown {
-    width: 100%;
-    display: flex;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 1.25rem;
+  width: 100%;
+  padding: 5% 0;
+  z-index: 1;
+}
+
+#input-DropDown:hover {
+  transform: scale(1.1);
+}
+
+.budget-section {
+  padding: 0.5rem 0.875rem 0.25rem;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.375rem;
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.budget-input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.625rem;
+  border: 0.094rem solid #d0d0d0;
+  font-size: 0.813rem;
+  background: #f5f5f5;
+  color: #333;
+  min-width: 5rem;
+  flex: 1 1 auto;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.budget-input:focus {
+  border-color: #004999;
+  background: #fff;
+}
+
+.budget-section {
+  padding: 0.5rem 0.875rem 0.25rem;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.375rem;
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.budget-input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.625rem;
+  border: 0.094rem solid #d0d0d0;
+  font-size: 0.813rem;
+  background: #f5f5f5;
+  color: #333;
+  min-width: 5rem;
+  flex: 1 1 auto;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.budget-input:focus {
+  border-color: #004999;
+  background: #fff;
+}
+
+.monthly-bud:hover{
+transform: scale(1.1);
+}
+
+#chart-container {
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  width: 30vw;
+  text-align: center;
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #004999;
+  margin-bottom: 0.25rem;
+}
+
+#chart-subtitle {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+#budgetChart {
+  max-width: 100%;
+}
+
+/* Responsive layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#dropdowns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  min-width: 280px;
+}
+
+#Pie\ Chart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30vw;
+  min-width: 280px;
+}
+
+.tax-bud {
+  margin: 0.75rem 0;
+  padding: 1.25rem;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#chart-container {
+  margin: 0.75rem 0;
+  padding: 1.25rem;
+  width: 100%;
+  text-align: center;
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#chart-subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 1rem;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+#chart-subtitle.positive {
+  color: #237f2b;
+  font-weight: 700;
+}
+
+#chart-subtitle.negative {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+#progress-container {
+  width: 60%;
+  margin: 1.5rem auto;
+}
+
+#progress-track {
+  width: 100%;
+  height: 0.75rem;
+  background: #d0d0d0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #237f2b;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+#progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+#progress-labels span {
+  font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
     flex-direction: column;
     align-items: center;
+  }
+
+  #dropdowns,
+  #Pie\ Chart {
+    width: 90vw;
+    min-width: unset;
+  }
+
+  .tax-bud {
+    width: 100%;
+  }
+
+  #chart-container {
+    width: 100%;
+  }
+
+  .Label {
+    font-size: 0.95rem;
+    padding: 0.875rem;
+  }
+
+  .budget-input {
+    font-size: 0.75rem;
+  }
 }
